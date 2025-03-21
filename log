@@ -181,3 +181,17 @@ test.c:61:15: error: initialization of ‘List *’ {aka ‘struct List *’} fr
 cc1: all warnings being treated as errors
 Compilation failed
 fa905d0
+Fri 21 Mar 2025 11:14:14 PM UTC: 
+ exercises.c | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:49:19: error: ‘auxiliar’ may be used uninitialized [-Werror=maybe-uninitialized]
+   49 |         *auxiliar = i;
+      |         ~~~~~~~~~~^~~
+exercises.c:46:10: note: ‘auxiliar’ was declared here
+   46 |     int* auxiliar;
+      |          ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+c9c0a72
