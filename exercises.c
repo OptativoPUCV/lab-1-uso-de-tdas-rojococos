@@ -101,7 +101,7 @@ Puedes usar una pila auxiliar.
 */
 
 void copia_pila(Stack* Pila1, Stack* Pila2){
-    Stack* Pilaaux = (Stack*) malloc(sizeof(Stack));
+    Stack* Pilaaux;
     int* aux;
     aux = top(Pila1);
     while(aux != NULL){

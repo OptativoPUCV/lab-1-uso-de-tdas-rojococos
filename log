@@ -225,3 +225,17 @@ exercises.c:104:45: error: invalid application of ‘sizeof’ to incomplete typ
       |                                             ^~~~~
 Compilation failed
 3168ba3
+Fri 21 Mar 2025 11:26:58 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:109:9: error: ‘Pilaaux’ may be used uninitialized [-Werror=maybe-uninitialized]
+  109 |         push(Pilaaux, aux);
+      |         ^~~~~~~~~~~~~~~~~~
+exercises.c:104:12: note: ‘Pilaaux’ was declared here
+  104 |     Stack* Pilaaux;
+      |            ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+bddbaf3
