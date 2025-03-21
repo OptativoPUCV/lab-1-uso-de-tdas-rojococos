@@ -19,3 +19,22 @@ arraylist.h:17:6: note: declared here
       |      ^~~~~~~~~
 Compilation failed
 3f6cb15
+Fri 21 Mar 2025 03:03:25 AM UTC: 
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:57:11: error: too few arguments to function ‘pushFront’
+   57 |     aux = pushFront(Lista);
+      |           ^~~~~~~~~
+In file included from exercises.c:6:
+arraylist.h:17:6: note: declared here
+   17 | void pushFront(List *L, void *dato);
+      |      ^~~~~~~~~
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:80:11: error: too few arguments to function ‘pushFront’
+   80 |     aux = pushFront(Lista);
+      |           ^~~~~~~~~
+arraylist.h:17:6: note: declared here
+   17 | void pushFront(List *L, void *dato);
+      |      ^~~~~~~~~
+Compilation failed
+d66bab6
