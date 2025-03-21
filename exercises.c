@@ -43,7 +43,7 @@ Al finalizar retorna la lista creada.
 
 List* crea_lista() {
     List* L = create_list();
-    int* auxiliar;
+    int* auxiliar = 0;
     int* espacio;
     for(int i = 1; i <= 10; i++){
         *auxiliar = i;
