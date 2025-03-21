@@ -43,14 +43,14 @@ Al finalizar retorna la lista creada.
 
 List* crea_lista() {
     List* L = create_list();
-    int* aux = NULL;
+
     int* espacio;
     for(int i = 1; i <= 10; i++){
+        espacio = (int*)malloc(sizeof(int));
         *espacio = i;
-        aux = (int*) realloc(aux, sizeof(espacio)); 
+        pushBack(L, espacio);   
     }
     
-    pushBack(L, aux);
     
     
     return L;
@@ -91,7 +91,7 @@ void eliminaElementos(List *Lista, int elem){
     while(1){
         if(aux == NULL) break;
         if(*aux == elem) popCurrent(Lista);
-        else aux = next(Lista);
+        aux = next(Lista);
 
     }
    free(aux);
