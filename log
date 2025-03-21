@@ -64,3 +64,14 @@ exercises.c:98:12: note: ‘Pilaaux’ was declared here
 cc1: all warnings being treated as errors
 Compilation failed
 77426cd
+Fri 21 Mar 2025 02:23:05 PM UTC: 
+ exercises.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:52:1: error: control reaches end of non-void function [-Werror=return-type]
+   52 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+8c79cff
