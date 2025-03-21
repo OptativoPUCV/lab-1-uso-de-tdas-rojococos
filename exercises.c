@@ -43,9 +43,14 @@ Al finalizar retorna la lista creada.
 
 List* crea_lista() {
     List* L = create_list();
-    for(int i = 1; i <= 10; i++)
+    int* aux = NULL;
+    int* espacio;
+    for(int i = 1; i <= 10; i++){
+        *espacio = i;
+        aux = (int*) realloc(aux, sizeof(espacio)); 
+    }
     
-    
+    pushBack(L, aux);
     
     
     return L;
