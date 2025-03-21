@@ -200,3 +200,18 @@ Fri 21 Mar 2025 11:14:58 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 3195619
+Fri 21 Mar 2025 11:23:41 PM UTC: 
+ exercises.c | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:46:10: error: unused variable ‘auxiliar’ [-Werror=unused-variable]
+   46 |     int* auxiliar;
+      |          ^~~~~~~~
+exercises.c: In function ‘copia_pila’:
+exercises.c:104:45: error: invalid application of ‘sizeof’ to incomplete type ‘Stack’ {aka ‘List’}
+  104 |     Stack* Pilaaux = (Stack*) malloc(sizeof(Stack));
+      |                                             ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+02cd771

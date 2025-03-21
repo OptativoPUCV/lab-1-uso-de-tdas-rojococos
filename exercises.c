@@ -43,11 +43,11 @@ Al finalizar retorna la lista creada.
 
 List* crea_lista() {
     List* L = create_list();
-    int* auxiliar = 0;
+    int* auxiliar;
     int* espacio;
     for(int i = 1; i <= 10; i++){
-        *auxiliar = i;
-        espacio = malloc(sizeof(auxiliar));
+        
+        espacio = (int*) malloc(sizeof(int));
         *espacio = i;
         pushBack(L, espacio);   
     }
@@ -87,7 +87,7 @@ void eliminaElementos(List *Lista, int elem){
     while (aux != NULL) {
             if (*aux == elem) {
                 popCurrent(Lista);
-                aux = next(Lista);
+                aux = first(Lista);
             } else aux = next(Lista);
         }
     }
@@ -101,7 +101,7 @@ Puedes usar una pila auxiliar.
 */
 
 void copia_pila(Stack* Pila1, Stack* Pila2){
-    Stack* Pilaaux = (Stack*) malloc(sizeof(Stack*));
+    Stack* Pilaaux = (Stack*) malloc(sizeof(Stack));
     int* aux;
     aux = top(Pila1);
     while(aux != NULL){
@@ -118,7 +118,7 @@ void copia_pila(Stack* Pila1, Stack* Pila2){
         aux = top(Pilaaux);        
     }
    free(Pilaaux);
-   free(aux);
+
 }
 /*
 Ejercicio 5.
