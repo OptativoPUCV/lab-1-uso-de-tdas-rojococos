@@ -1,0 +1,21 @@
+Fri 21 Mar 2025 03:03:22 AM UTC: 
+ exercises.c | 44 ++++++++++++++++++++++++++++++++++++++++----
+ 1 file changed, 40 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:57:11: error: too few arguments to function ‘pushFront’
+   57 |     aux = pushFront(Lista);
+      |           ^~~~~~~~~
+In file included from exercises.c:6:
+arraylist.h:17:6: note: declared here
+   17 | void pushFront(List *L, void *dato);
+      |      ^~~~~~~~~
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:80:11: error: too few arguments to function ‘pushFront’
+   80 |     aux = pushFront(Lista);
+      |           ^~~~~~~~~
+arraylist.h:17:6: note: declared here
+   17 | void pushFront(List *L, void *dato);
+      |      ^~~~~~~~~
+Compilation failed
+3f6cb15

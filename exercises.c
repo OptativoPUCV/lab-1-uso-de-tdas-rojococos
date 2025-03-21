@@ -51,8 +51,19 @@ Ejercicio 2.
 Crea una función que reciba una lista de enteros (int*) y 
 retorne la suma de sus elementos.
 */
-int sumaLista(List *L) {
-   return 0;
+int sumaLista(List *Lista){
+    int suma;
+    int* aux;
+    aux = pushFront(Lista);
+
+    while(aux != NULL){
+
+        suma += *aux;
+
+        aux = next(Lista);
+    }    
+   free(aux);
+   return suma;
 }
 
 /*
@@ -64,8 +75,16 @@ Asume que popCurrent luego de eliminar un elemento se
 posiciona en el elemento anterior.
 */
 
-void eliminaElementos(List*L, int elem){
+void eliminaElementos(List *Lista, int elem){
+    int* aux;
+    aux = pushFront(Lista);
+    while(1){
+        if(aux == NULL) break;
+        if(*aux == elem) popCurrent(Lista);
+        else aux = next(Lista);
 
+    }
+   free(aux);
 }
 
 /*
@@ -75,9 +94,26 @@ El orden de ambas pilas se debe mantener.
 Puedes usar una pila auxiliar.
 */
 
-void copia_pila(Stack* P1, Stack* P2) {
-}
+void copia_pila(Stack* Pila1, Stack* Pila2){
+    Stack* Pilaaux;
+    int* aux;
+    aux = top(Pila1);
+    while(aux != NULL){
+        pop(Pila1);
+        push(Pilaaux, aux);
+        aux = top(Pila1);
+    }
+    aux = top(Pilaaux);
 
+    while(aux != NULL){
+        pop(Pilaaux);
+        push(Pila1, aux);
+        push(Pila2, aux);
+        aux = top(Pilaaux);        
+    }
+   free(Pilaaux);
+   free(aux);
+}
 /*
 Ejercicio 5.
 La función verifica si la cadena de entrada tiene sus 
@@ -88,4 +124,5 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 int parentesisBalanceados(char *cadena) {
    return 0;
 }
+
 
