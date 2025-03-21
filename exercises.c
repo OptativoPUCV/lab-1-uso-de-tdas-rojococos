@@ -91,9 +91,9 @@ void eliminaElementos(List *Lista, int elem){
             if(*aux == elem) {
                 popCurrent(Lista); 
                 aux = first(Lista); 
-            } else {
-                aux = next(Lista); 
             }
+            aux = next(Lista); 
+            
         }
     }
 
