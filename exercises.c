@@ -54,7 +54,7 @@ retorne la suma de sus elementos.
 int sumaLista(List *Lista){
     int suma;
     int* aux;
-    aux = pushFront(Lista);
+    aux = first(Lista);
 
     while(aux != NULL){
 
@@ -77,7 +77,7 @@ posiciona en el elemento anterior.
 
 void eliminaElementos(List *Lista, int elem){
     int* aux;
-    aux = pushFront(Lista);
+    aux = first(Lista);
     while(1){
         if(aux == NULL) break;
         if(*aux == elem) popCurrent(Lista);

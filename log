@@ -38,3 +38,17 @@ arraylist.h:17:6: note: declared here
       |      ^~~~~~~~~
 Compilation failed
 d66bab6
+Fri 21 Mar 2025 03:05:02 AM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:103:9: error: ‘Pilaaux’ may be used uninitialized [-Werror=maybe-uninitialized]
+  103 |         push(Pilaaux, aux);
+      |         ^~~~~~~~~~~~~~~~~~
+exercises.c:98:12: note: ‘Pilaaux’ was declared here
+   98 |     Stack* Pilaaux;
+      |            ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+131c082
