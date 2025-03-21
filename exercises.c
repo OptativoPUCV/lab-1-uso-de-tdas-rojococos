@@ -41,7 +41,7 @@ debes reservar memoria para cada elemento que agregues.
 Al finalizar retorna la lista creada.
 */
 
-List* crea_lista() {
+/*List* crea_lista() {
     List* L = create_list();
 
     int* espacio;
@@ -54,7 +54,7 @@ List* crea_lista() {
     
     
     return L;
-}
+}*/
 
 /*
 Ejercicio 2.

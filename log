@@ -169,3 +169,15 @@ Fri 21 Mar 2025 11:06:43 PM UTC:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 f11ddaf
+Fri 21 Mar 2025 11:10:00 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+test.c: In function ‘test_crea_lista’:
+test.c:61:15: error: implicit declaration of function ‘crea_lista’; did you mean ‘create_list’? [-Werror=implicit-function-declaration]
+   61 |     List* L = crea_lista();
+      |               ^~~~~~~~~~
+      |               create_list
+test.c:61:15: error: initialization of ‘List *’ {aka ‘struct List *’} from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+cc1: all warnings being treated as errors
+Compilation failed
+fa905d0
