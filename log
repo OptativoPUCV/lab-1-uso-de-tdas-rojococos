@@ -52,3 +52,15 @@ exercises.c:98:12: note: ‘Pilaaux’ was declared here
 cc1: all warnings being treated as errors
 Compilation failed
 131c082
+Fri 21 Mar 2025 03:10:07 AM UTC: 
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:103:9: error: ‘Pilaaux’ may be used uninitialized [-Werror=maybe-uninitialized]
+  103 |         push(Pilaaux, aux);
+      |         ^~~~~~~~~~~~~~~~~~
+exercises.c:98:12: note: ‘Pilaaux’ was declared here
+   98 |     Stack* Pilaaux;
+      |            ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+77426cd
