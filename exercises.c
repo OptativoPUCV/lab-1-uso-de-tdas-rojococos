@@ -89,7 +89,7 @@ void eliminaElementos(List *Lista, int elem){
     aux = first(Lista);
     while(aux != NULL){
         if(*aux == elem) popCurrent(Lista);
-        aux = next(Lista);
+        aux = pushCurrent(Lista);
 
     }
 }
