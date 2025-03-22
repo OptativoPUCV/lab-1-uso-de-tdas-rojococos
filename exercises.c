@@ -163,7 +163,7 @@ int parentesisBalanceados(char *cadena) {
        if (contador == -1) cumple = 1;
        else cumple = 0;
 
-       free(pila);
+       
        return cumple;
     }
 
