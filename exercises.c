@@ -148,23 +148,23 @@ int parentesisBalanceados(char *cadena) {
           } 
           else if (c == ')' || c == '}' || c == ']') {
              if (contador == -1) {
-                free(pila); return 0;
-             }
+                free(pila); 
+                return 0;}
 
              char top = pila[contador];
              if ((c == ')' && top != '(') || (c == ']' && top != '[') || (c == '}' && top != '{')) {
-                free(pila); return 0;
-             }
+                free(pila);
+                 return 0;}
              contador--; 
           }
        }
 
-       int resultado;
-       if (contador == -1) resultado = 1;
-       else resultado = 0;
+       int cumple;
+       if (contador == -1) cumple = 1;
+       else cumple = 0;
 
        free(pila);
-       return resultado;
+       return cumple;
     }
 
 
