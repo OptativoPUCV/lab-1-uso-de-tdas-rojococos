@@ -138,7 +138,7 @@ int parentesisBalanceados(char *cadena) {
         char c = cadena[i] ;
 
         if (c == '(' || c == '{' || c == '[') {
-             contador++;
+             contador+= 1 ;
              char *temp = (char*)realloc(pila,(contador+1)*sizeof(char));
              if (!temp) {
                 free(pila); 
@@ -146,25 +146,29 @@ int parentesisBalanceados(char *cadena) {
              pila = temp;
              pila[contador] = c;
           } 
-          else if (c == ')' || c == '}' || c == ']') {
-             if (contador == -1) {
+        else if (c == ')' || c == '}' || c == ']') {
+            if (contador == -1) {
                 free(pila); 
-                return 0;}
+                return 0;
+            }
 
-             char top = pila[contador];
-             if ((c == ')' && top != '(') || (c == ']' && top != '[') || (c == '}' && top != '{')) {
+        char top = pila[contador];
+        if ((c == ')' && top != '(') || (c == ']' && top != '[') || (c == '}' && top != '{')){
                 free(pila);
                  return 0;}
-             contador--; 
+             contador -= 1; 
           }
-       }
+       } //fin cadnea
 
        int cumple;
+    
        if (contador == -1) cumple = 1;
        else cumple = 0;
-
-       
        return cumple;
     }
+
+
+
+
 
 
