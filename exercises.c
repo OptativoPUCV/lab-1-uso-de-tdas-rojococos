@@ -143,8 +143,9 @@ int parentesisBalanceados(char *cadena) {
              if (!temp) {
                 free(pila); 
                 return 0; }
-             pila = temp;
              pila[contador] = c;
+             pila = temp;
+             
           } 
           else if (c == ')' || c == '}' || c == ']') {
              if (contador == -1) {

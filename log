@@ -263,3 +263,17 @@ Sat 22 Mar 2025 10:38:43 PM UTC:
  tests:  9|0
 total_score: 70/70
 a9f4332
+Sat 22 Mar 2025 10:38:56 PM UTC: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:146:18: error: pointer ‘pila’ may be used after ‘realloc’ [-Werror=use-after-free]
+  146 |              pila[contador] = c;
+      |                  ^
+exercises.c:142:34: note: call to ‘realloc’ here
+  142 |              char *temp = (char*)realloc(pila,(contador+1)*sizeof(char));
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+5cc35d1
