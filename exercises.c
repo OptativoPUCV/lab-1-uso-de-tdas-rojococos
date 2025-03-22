@@ -131,12 +131,41 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-    
-    
-    
-    printf("balanceame la pixula");
-    
-   return 0;
-}
+    char *stack=NULL;
+       int count=-1;
+
+       for (int i = 0; cadena[i] != '\0'; i++) {
+          char c = cadena[i] ;
+
+          if (c == '(' || c == '{' || c == '[') {
+             count++;
+             char *temp = (char*)realloc(stack,(count+1)*sizeof(char));
+             if (!temp) {
+                free(stack); return 0;
+             }
+
+             stack = temp;
+             stack[count] = c;;
+          } 
+          else if (c == ')' || c == '}' || c == ']') {
+             if (count == -1) {
+                free(stack); return 0;
+             }
+
+             char top = stack[count];
+             if ((c == ')' && top != '(') || (c == ']' && top != '[') || (c == '}' && top != '{')) {
+                free(stack); return 0;
+             }
+             count--; 
+          }
+       }
+
+       int resultado;
+       if (count == -1) resultado = 1;
+       else resultado = 0;
+
+       free(stack);
+       return resultado;
+    }
 
 
